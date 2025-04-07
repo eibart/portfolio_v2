@@ -11,6 +11,7 @@
 </head>
 <body>
 <!-- NAV -->
+ <div class="top" id="top"></div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="navBar">
   <div class="container-fluid d-flex flex-column align-items-center" id="container-fluid">
       <a class="navbar-brand mx-auto" href="index.html">Bart vd Berg</a><div class="d-flex align-items-center">
@@ -22,10 +23,10 @@
     </div>
       <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="navbar-nav mx-auto">
-              <li class="nav-item"><a class="nav-link" href="#section-one">ABOUT</a></li>
-              <li class="nav-item"><a class="nav-link" href="#section-two">PORTFOLIO</a></li>
-              <li class="nav-item"><a class="nav-link" href="#section-three">CERTIFICATEN</a></li>
-              <li class="nav-item"><a class="nav-link" href="#section-four">CONTACT</a></li>
+              <li class="nav-item"><a class="nav-link" href="#top">ABOUT</a></li>
+              <li class="nav-item"><a class="nav-link" href="#portfolio">PORTFOLIO</a></li>
+              <li class="nav-item"><a class="nav-link" href="#certificaten">CERTIFICATEN</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
           </ul>
       </div>
   </div>
@@ -36,7 +37,7 @@
 <!-- HEADER -->
 <header>
     <div class="container-header" id="container-header">
-      <h1 class="text-header about-header">About Me</h1>
+      <h1 class="text-header about-header" id="about">About Me</h1>
       <div class="hr-custom"></div>
         <div class="container-p">
         <p class="p-text">ICT heeft me altijd gefascineerd. Ik configureer dan ook altijd zelf mijn systemen en los eventuele problemen zelfstandig op. Mocht ik ergens niet direct uitkomen, dan duik ik het internet in totdat ik een oplossing heb gevonden.</p>
@@ -53,7 +54,7 @@
 <!-- /HEADER -->
 
 <div class="custom-container" id="custom-container">
-    <h1 class="text-header grid-header">Portfolio</h1>
+    <h1 class="text-header grid-header" id="portfolio">Portfolio</h1>
     <div class="hr-custom"></div>
     <div class="gallery" id="gallery"></div>
     <div class="gallery-controls">
@@ -68,7 +69,7 @@
   </div>
   </div>
   <div class="container-certificaten" id="container-certificaten">
-    <h1 class="text-header cerfiticaten-header">Certificaten</h1>
+    <h1 class="text-header cerfiticaten-header" id="certificaten">Certificaten</h1>
     <div class="hr-custom"></div>
       <div class="container-p">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde nemo voluptas fugiat, accusamus ab at quaerat quam reprehenderit laborum numquam aliquid harum rem assumenda magnam qui quia quod? Quis, facilis!
@@ -84,7 +85,7 @@
       </div>
     </div>
   <div class="container-footer" id="container-footer">
-    <h1 class="text-header footer-header">Contact</h1>
+    <h1 class="text-header footer-header" id="contact">Contact</h1>
     <div class="hr-custom"></div>
       <div class="contact-page" id="contact-page">
         <form action="mailto:bartvdbergg@gmail.com" method="post"  enctype="text/plain">

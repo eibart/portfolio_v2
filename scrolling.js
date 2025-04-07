@@ -1,17 +1,20 @@
 // Automatische rendering maken van de portfolio items
 const allItems = [
-    { src: "./images/calculator.png", text: "Calculator"},
-    { src: "./images/custom_countdown.png", text: "Custom Countdown"},
-    { src: "./images/infinite-scroll.png", text: "Infinite Scroll"},
-    { src: "./images/lightdark1.png", text: "Lightdark"},
-    { src: "./images/math_sprint.png", text: "Math Sprint"},
-    { src: "./images/musicplayer.png", text: "Musicplayer"},
-    { src: "./images/paintclone.png", text: "Paintclone"},
-    { src: "./images/picture-picture.png", text: "Picture-in-Picture"},
-    { src: "./images/pong.png", text: "Pong"},
-    { src: "./images/quote-generator.png", text: "Quote-Generator"},
-    { src: "./images/robotfriends.png", text: "Robotfriends"},
-    { src: "./images/splash_page.png", text: "Splash Page"},
+    { src: "./images/calculator.png", text: "Calculator", link: "https://eibart.github.io/calculator/"},
+    { src: "./images/custom_countdown.png", text: "Custom Countdown", link: "https://eibart.github.io/custom-countdown/"},
+    { src: "./images/infinite-scroll.png", text: "Infinite Scroll", link: "https://eibart.github.io/infinite-scroll/"},
+    { src: "./images/lightdark1.png", text: "Lightdark", link: "https://eibart.github.io/lightdarkmode/"},
+    { src: "./images/math_sprint.png", text: "Math Sprint", link: "https://eibart.github.io/math-sprint/"},
+    { src: "./images/musicplayer.png", text: "Musicplayer", link: "https://eibart.github.io/music-player/"},
+    { src: "./images/paintclone.png", text: "Paintclone", link: "https://eibart.github.io/paint-clone/"},
+    { src: "./images/picture-picture.png", text: "Picture-in-Picture", link: "https://eibart.github.io/picture-in-picture/"},
+    { src: "./images/pong.png", text: "Pong", link: "https://eibart.github.io/pong/"},
+    { src: "./images/quote-generator.png", text: "Quote-Generator", link: "https://eibart.github.io/quote-generator/"},
+    { src: "./images/robotfriends.png", text: "Robotfriends", link: "https://eibart.github.io/robotfriends/"},
+    { src: "./images/splash_page.png", text: "Splash Page", link: "https://eibart.github.io/splash-page/"},
+    {src: "./images/nasa-api.png", text: "Nasa API", link: "https://eibart.github.io/nasa-api/"},
+    {src: "./images/steen-papier-schaar.png", test: "Steen Papier Schaar", link: "https://eibart.github.io/spock-rock-game/"},
+    {src: "./images/form-validator.png", text: "Form validator", link: "https://eibart.github.io/form-validator/"}
 ];
 
 const gallery = document.getElementById('gallery');
@@ -45,7 +48,7 @@ function galleryGrid() {
         if (item.src) {
             div.classList.add('view', 'overlay', 'hm-black-light', 'gallery-item');
             div.innerHTML = `
-                <img src="${item.src}" alt="Gallery-Image" class="img-fluid">
+                <img src="${item.src}" alt="Gallery-Image" class="img-fluid" github-link="${item.link}">
                 <div class="mask flex-center">
                     <p class="gallery-text">${item.text}</p>
                 </div>
@@ -70,12 +73,14 @@ setTimeout(() => {
 document.querySelectorAll('.gallery-item').forEach(item => {
     const img = item.querySelector('img');
     const text = item.querySelector('.gallery-text');
+    const link = img.getAttribute('github-link');
 
     img.addEventListener('click', () => {
         galleryImg.src = img.src;  // Zet de juiste afbeelding in de gallery-open
-        galleryOpenTekst.innerHTML = `
-            <a href="${img.src}" target="_blank" style="color: white; text-decoration:none ;font-weight:bold">${text ? text.innerHTML : ''}</a>
-        `;
+        galleryOpenTekst.innerHTML = link
+        ?`
+            <a href="${link}" target="_blank" style="color: white; text-decoration:none ;font-weight:bold">${text ? text.innerHTML : ''} (GitHub Link)</a> 
+        `: (text ? text.innerHTML : '');
         
         galleryOpen.classList.add('active');
     });

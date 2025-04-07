@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Bart van den Berg</title>
+<!-- Bootstrap 5.3 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="./styles.css?<?=filemtime('styles.css');?>">
+<link href="https://fonts.googleapis.com/css2?family=Gidole&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- NAV -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="navBar">
+  <div class="container-fluid d-flex flex-column align-items-center" id="container-fluid">
+      <a class="navbar-brand mx-auto" href="index.html">Bart vd Berg</a><div class="d-flex align-items-center">
+        <button id="theme-toggle" class="btn btn-outline-dark me-2">🌙</button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar" 
+                aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="navbar-nav mx-auto">
+              <li class="nav-item"><a class="nav-link" href="#section-one">ABOUT</a></li>
+              <li class="nav-item"><a class="nav-link" href="#section-two">PORTFOLIO</a></li>
+              <li class="nav-item"><a class="nav-link" href="#section-three">CERTIFICATEN</a></li>
+              <li class="nav-item"><a class="nav-link" href="#section-four">CONTACT</a></li>
+          </ul>
+      </div>
+  </div>
+
+</nav>
+</div>
+<!-- /NAV -->
+<!-- HEADER -->
+<header>
+    <div class="container-header" id="container-header">
+      <h1 class="text-header about-header">About Me</h1>
+      <div class="hr-custom"></div>
+        <div class="container-p">
+        <p class="p-text">ICT heeft me altijd gefascineerd. Ik configureer dan ook altijd zelf mijn systemen en los eventuele problemen zelfstandig op. Mocht ik ergens niet direct uitkomen, dan duik ik het internet in totdat ik een oplossing heb gevonden.</p>
+        <p class="p-text">
+          Meer dan 15 jaar heb ik met plezier in de detailhandel gewerkt, maar ik voelde steeds sterker dat dit niet mijn toekomst was. Daarom ben ik op zoek gegaan naar wat écht bij me past. Tijdens die zoektocht begon ik met het volgen van cursussen via Udemy, waaronder een HTML-cursus die me enorm inspireerde.</p>
+          <p class="p-text">
+          Vanaf dat moment ben ik me steeds verder gaan verdiepen in webontwikkeling. Ik volgde meer cursussen en maakte kennis met JavaScript, wat ik ontzettend interessant vond. Dit motiveerde me om mezelf verder te ontwikkelen en mijn vaardigheden uit te breiden.</p>
+          <p class="p-text">
+          Met veel energie heb ik gewerkt aan mijn portfolio, een project waar ik nog steeds aan blijf sleutelen – niet alleen om mijn kennis te vergroten, maar vooral omdat ik het leuk vind om te doen.</p>
+        </div>
+      </div>
+</header>
+
+<!-- /HEADER -->
+
+<div class="custom-container" id="custom-container">
+    <h1 class="text-header grid-header">Portfolio</h1>
+    <div class="hr-custom"></div>
+    <div class="gallery" id="gallery"></div>
+    <div class="gallery-controls">
+      <button class="gallery-btn" type="button" id="prevBtn" disabled>Vorige</button>
+      <button class="gallery-btn" type="button" id="nextBtn">Next</button>
+    </div>
+
+      <div class="gallery-open" id="gallery-open">
+        <img src="" alt="Vergrote afbeelding" id="gallery-openImg">
+        <p class="gallery-open-tekst" id="galleryOpenTekst"></p>
+    </div>
+  </div>
+  </div>
+  <div class="container-certificaten" id="container-certificaten">
+    <h1 class="text-header cerfiticaten-header">Certificaten</h1>
+    <div class="hr-custom"></div>
+      <div class="container-p">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde nemo voluptas fugiat, accusamus ab at quaerat quam reprehenderit laborum numquam aliquid harum rem assumenda magnam qui quia quod? Quis, facilis!
+        Cumque, repudiandae eveniet! Consectetur, quo earum nostrum deserunt amet esse? Quia, alias doloremque. Unde explicabo quo distinctio nemo culpa porro! Quasi ducimus, similique porro consectetur molestiae nihil ipsam perferendis perspiciatis.
+        Ipsam iure cum unde recusandae qui eligendi? Maiores, qui a. Saepe mollitia odio nisi illo totam a at ab nostrum odit sint veritatis aut sunt corporis magnam, adipisci dolorem et.
+        Nam amet sit modi odit minima excepturi enim placeat id laudantium. Accusamus ipsam asperiores architecto, accusantium fugiat eum similique vero laboriosam adipisci velit sunt incidunt corporis saepe sequi tempore beatae!
+        Delectus obcaecati vitae ipsam qui, quod eius odio. Magnam doloremque laboriosam aut, sint delectus consequuntur enim odio voluptatem quibusdam, placeat omnis maxime ratione quos ex nihil totam! Temporibus, ipsam obcaecati?
+        Temporibus aut repellendus ducimus? Assumenda, eveniet incidunt. Adipisci expedita alias perferendis beatae quo corporis magnam, voluptatibus commodi explicabo. Rerum aspernatur dolor pariatur vel repellat cupiditate labore fuga nulla dolorem laborum.
+        Consequatur cumque dolorum veniam quae ex, recusandae, modi fuga eum amet reiciendis nam, perferendis ipsa similique. Necessitatibus quos adipisci molestias sed recusandae animi aliquam quaerat dicta mollitia! Tempore, et molestiae.
+        Magni placeat vel, dolorem hic quasi eos reiciendis! Asperiores ipsam repellat ratione accusamus consequuntur sed nesciunt nobis fugiat in molestiae, quod molestias, corrupti facilis assumenda velit architecto fuga ex. Dolore.
+        Autem beatae sunt porro nam dolor similique asperiores eligendi molestias? Et ipsa amet velit nisi cum, enim qui nemo ipsum nulla iste laboriosam suscipit excepturi vitae, debitis labore, quae dolore?
+        Rem itaque dolorem debitis vel ipsa vitae incidunt corporis ut, sint quisquam culpa autem laborum voluptatem tenetur, quam quae molestiae voluptate officiis tempore? Necessitatibus, illo repellendus? Obcaecati pariatur quae animi.
+      </div>
+    </div>
+  <div class="container-footer" id="container-footer">
+    <h1 class="text-header footer-header">Contact</h1>
+    <div class="hr-custom"></div>
+      <div class="contact-page" id="contact-page">
+        <form action="mailto:bartvdbergg@gmail.com" method="post"  enctype="text/plain">
+          <label for="name">Naam:</label>
+          <input type="text" id="name" name="name" required><br><br>
+          
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required><br><br>
+          
+          <label for="message">Bericht:</label><br>
+          <textarea id="message" name="message" rows="5" cols="30" required></textarea><br><br>
+          
+          <button type="submit">Verzenden</button>
+      </form>
+      </div>
+    </div>
+
+
+<!-- Bootstrap 5.3 JS (nodig voor toggling) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="scrolling.js"></script>
+<script src="darkmode.js"></script>
+</body>
+</html>

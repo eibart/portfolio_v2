@@ -1,0 +1,382 @@
+:root {
+  --styling1: rgb(42, 157, 143);
+  --styling2: rgb(130, 32, 74);
+  --header: rgb(70, 63, 26);
+  --darkmodebg: black;
+}
+
+
+body {
+  font-size: 16px;
+  padding-top: 180px;
+  margin: auto;
+  font-family: "Gidole", sans-serif;
+  letter-spacing: 1px;  
+  word-spacing: 2px;
+  justify-items: center;
+    background-color: rgb(239, 247, 255);
+    
+}
+/* Dark Modes */
+.dark-mode-toggle {
+    background-color: var(--darkmodebg);
+}
+
+/* Header container styling */
+.container-header {
+  color: white;
+  margin: 0 auto; /* Centreert de container */
+  padding: 50px 0px; /* Boven- en onderruimte */
+  background-color: var(--styling1);
+  width: 1000px;
+  justify-items: center;
+  border-radius: 15px 15px 0 0;
+  text-align: center;
+}
+.container-header-dark {
+  color: black;
+}
+
+.header-text {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+  text-align: center;  
+}
+.hr-custom {
+  height: 5px;
+  width: 300px;
+  margin: 0 auto 50px auto; 
+  background-color: var(--styling2);
+}
+
+.container-p {
+  width: 85%;
+  display: inline-block;
+}
+.p-text {
+  text-align: center;
+  word-wrap: normal;
+}
+
+/* Navbar */
+.navbar {
+  padding: 0;
+}
+
+.navbar-dark {
+  color: white !important;
+  background-color: black !important;
+}
+
+.navbar-toggler {
+  margin-bottom: 10px;
+
+}
+
+#theme-toggle {
+  width: 55.6px;
+  height: 39.6px;
+  margin: 0px 0px 10px;
+}
+
+.nav-link {
+  color: var(--header);
+  font-size: 1.2rem;
+}
+.navbar-brand {
+  font-size: 50px;  
+}
+
+.container-fluid {
+  background-color: rgb(239, 247, 255);
+}
+/* Custom Container */
+
+.custom-container {
+  background-color: var(--styling1);
+  padding-top: 0px;
+  padding-bottom: 50px;
+  z-index: 2;
+  width: 1000px;
+  justify-content: center;
+  justify-items: center; 
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-header {
+  color: var(--header);
+  font-weight: bold;
+  text-align: center;
+  
+}
+/* CSS Grid */
+.gallery {
+  border-radius: 15px;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  /* Flexibele kolommen */
+  grid-auto-rows: repeat(3, 1fr);
+  padding: 20px;
+  justify-items: center;
+  justify-content: center;
+  background-color: var(--styling2);
+  width: 110%; 
+}
+
+.gallery-item {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
+  padding: 10px;
+  width: 100%;  /* Volledige breedte van de container */
+  max-width: 100%;  /* Voorkomt dat het item groter is dan de container */
+  margin: auto;
+}
+
+.empty-grid {
+  background-color: var(--styling2);  /* Of een andere kleur om lege cellen te markeren */
+  visibility: hidden;
+}
+/* Hover effect */
+.gallery-item:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+/* Image styling */
+.gallery-item img {
+  object-fit: cover;
+  height: auto;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.2s;
+}
+
+
+.gallery-controls {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.gallery-btn {
+  padding: 10px 15px;
+  border: none;
+  background: var(--styling2);;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 16px;
+  margin: 5px;
+}
+
+.gallery-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+
+}
+
+/* Text styling */
+.gallery-text {
+  margin: 10px auto 5px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/*Openen van image in midden */
+.gallery-open {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s;
+}
+
+.gallery-open.active {
+  visibility: visible;
+  opacity: 1;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-open img {
+  max-width: 600px;
+  max-height: 80vh;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.gallery-open-tekst {
+color: white;
+margin-top: 10px;
+font-size: 18px;
+}
+
+/* Container Certificaten */
+.container-certificaten {
+  color: white;
+  margin: 0px auto 0px auto; /* Centreert de container */
+  padding: 0px 0px 50px; /* Boven- en onderruimte */
+  background-color: var(--styling1);
+  width: 1000px;
+  justify-items: center;
+  text-align: center;
+}
+
+.container-footer {
+  color: white;
+  margin: 0px auto 50px auto; /* Centreert de container */
+  padding: 0px 0px 50px 0px; /* Boven- en onderruimte */
+  background-color: var(--styling1);
+  width: 1000px;
+  justify-items: center;
+  border-radius: 0 0 15px 15px;
+  text-align: center;
+}
+.containers-dark {
+  color: black;
+}
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  width: 75%;
+}
+
+/* Media query voor kleinere schermen */
+
+/* Nog kleinere schermen (mobiel) */
+@media (max-width: 500px) {
+  body {
+    padding-top: 90px;
+  }
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));  /* Nog kleinere kolommen */
+    padding: 15px;
+    width: 110%;
+  }
+  .gallery > div:nth-child(n+7) {
+    display: none;
+}
+  .navbar-brand {
+    font-size: 22px;  /* Kleinere fontgrootte op heel kleine schermen */
+  }
+  
+  .header-container {
+    width: 75%;  /* Zorg ervoor dat de header volledig de breedte benut op mobiel */
+    padding: 80px 0;  /* Verklein de padding voor mobiel */
+  }
+  .custom-container, .container-header, .container-p, .container-footer, .container-certificaten {
+    width: 90%;
+  }
+  /* .container-header {
+    width: 90%;
+  }
+  .container-p {
+    width: 90%;
+  } */
+  .hr-custom {
+    width: 200px;
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  body {
+    padding-top: 90px;
+  }
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  /* Nog kleinere kolommen */
+    padding: 15px;
+    width: 110%;
+  }
+  .gallery > div:nth-child(n+7) {
+    display: none;
+}
+  .navbar-brand {
+    font-size: 22px;  /* Kleinere fontgrootte op heel kleine schermen */
+  }
+  
+  .header-container {
+    width: 75%;  /* Zorg ervoor dat de header volledig de breedte benut op mobiel */
+    padding: 80px 0;  /* Verklein de padding voor mobiel */
+  }
+  .custom-container, .container-header, .container-p, .container-footer, .container-certificaten {
+    width: 90%;
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1195px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));  /* Nog kleinere kolommen */
+    padding: 15px;
+    width: 110%;
+  }
+  
+}
+@media (min-width: 768px) and (max-width: 1498px) {
+  body {
+    padding-top: 90px;
+  }
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);  /* Nog kleinere kolommen */
+    grid-template-rows:repeat(2, auto);
+    padding: 15px;
+    width: 110%;
+    justify-content: center;
+  }
+  /* .gallery > div:nth-child(n+5) {
+    display: none;
+} */
+ /* .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));  /* Nog kleinere kolommen */ 
+    /*
+    padding: 15px;
+    width: 110%;
+  }*/
+  
+  .navbar-brand {
+     font-size: 22px;   /* Kleinere fontgrootte op heel kleine schermen  */
+   }
+  
+  .header-container {
+    width: 75%;  /* Zorg ervoor dat de header volledig de breedte benut op mobiel */ 
+    padding: 80px 0;  /* Verklein de padding voor mobiel */
+  } 
+  .custom-container, .container-header,  .container-footer, .container-certificaten{
+    width: 90%;
+  }
+}
+
+@media (min-width: 990px) and (max-width: 1498px) {
+  body {
+    padding-top: 140px;
+  }
+.gallery {
+  grid-template-columns: repeat(3, 1fr); /* 2 kolommen */
+  grid-template-rows: repeat(2, 1fr); /* 2 rijen */
+}
+}
+
+/* MEDIA FOR CHROME */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  body {
+    transform: scale(0.95);
+    transform-origin: top center;
+  }
+}

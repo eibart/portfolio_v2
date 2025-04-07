@@ -1,17 +1,17 @@
 // Automatische rendering maken van de portfolio items
 const allItems = [
     { src: "./images/calculator.png", text: "Calculator"},
-    { src: "./images/custom_countdown.png", text: "custom_countdown"},
-    { src: "./images/infinite-scroll.png", text: "infinite-scroll"},
-    { src: "./images/lightdark1.png", text: "lightdark1"},
-    { src: "./images/math_sprint.png", text: "math_sprint"},
-    { src: "./images/musicplayer.png", text: "musicplayer"},
-    { src: "./images/paintclone.png", text: "paintclone"},
-    { src: "./images/picture-picture.png", text: "picture-picture"},
-    { src: "./images/pong.png", text: "pong"},
-    { src: "./images/quote-generator.png", text: "quote-generator"},
-    { src: "./images/robotfriends.png", text: "robotfriends"},
-    { src: "./images/splash_page.png", text: "splash_page"},
+    { src: "./images/custom_countdown.png", text: "Custom Countdown"},
+    { src: "./images/infinite-scroll.png", text: "Infinite Scroll"},
+    { src: "./images/lightdark1.png", text: "Lightdark"},
+    { src: "./images/math_sprint.png", text: "Math Sprint"},
+    { src: "./images/musicplayer.png", text: "Musicplayer"},
+    { src: "./images/paintclone.png", text: "Paintclone"},
+    { src: "./images/picture-picture.png", text: "Picture-in-Picture"},
+    { src: "./images/pong.png", text: "Pong"},
+    { src: "./images/quote-generator.png", text: "Quote-Generator"},
+    { src: "./images/robotfriends.png", text: "Robotfriends"},
+    { src: "./images/splash_page.png", text: "Splash Page"},
 ];
 
 const gallery = document.getElementById('gallery');
@@ -73,7 +73,10 @@ document.querySelectorAll('.gallery-item').forEach(item => {
 
     img.addEventListener('click', () => {
         galleryImg.src = img.src;  // Zet de juiste afbeelding in de gallery-open
-        galleryOpenTekst.innerHTML = text ? text.innerHTML : '';
+        galleryOpenTekst.innerHTML = `
+            <a href="${img.src}" target="_blank" style="color: white; text-decoration:none ;font-weight:bold">${text ? text.innerHTML : ''}</a>
+        `;
+        
         galleryOpen.classList.add('active');
     });
 });

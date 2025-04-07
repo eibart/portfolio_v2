@@ -13,7 +13,7 @@ const allItems = [
     { src: "./images/robotfriends.png", text: "Robotfriends", link: "https://eibart.github.io/robotfriends/"},
     { src: "./images/splash_page.png", text: "Splash Page", link: "https://eibart.github.io/splash-page/"},
     {src: "./images/nasa-api.png", text: "Nasa API", link: "https://eibart.github.io/nasa-api/"},
-    {src: "./images/steen-papier-schaar.png", test: "Steen Papier Schaar", link: "https://eibart.github.io/spock-rock-game/"},
+    {src: "./images/steen-papier-schaar.png", text: "Steen Papier Schaar", link: "https://eibart.github.io/spock-rock-game/"},
     {src: "./images/form-validator.png", text: "Form validator", link: "https://eibart.github.io/form-validator/"}
 ];
 
